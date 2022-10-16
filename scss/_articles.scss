@@ -1,0 +1,68 @@
+@use 'variables' as var;
+@use 'generals' as gen;
+.lastest-news-articles {
+    &__introducing {
+        @include gen.introducing;
+    }
+    &__title {
+        @include gen.title($text-align: center);
+    }
+    &__description {
+        @include gen.description($font-color: var.$font-color-4, $text-align: center);
+    }
+    &__title-style {
+        display: flex;
+        justify-content: center;
+    }
+    &__article-container {
+        display: flex;
+        align-items: center;
+        gap: 3%;
+        .article {
+            &__title-container {
+                margin: 30px 0 20px;
+                &>h4 {
+                    display: block;
+                    @include gen.title($font-size: 22px, $letter-spacing: 0);
+                    margin-bottom: 5px;
+                }
+                &>h6 {
+                    font-family: var.$secondary-font;
+                    font-size: 12px;
+                    color: var.$font-color-7;
+                    font-style: italic;
+                    &>span:first-child {
+                        padding: 0 5px;
+                    }
+                    &>span:last-child::before {
+                        content: '\f02b';
+                        font-family: var.$icon-font-awesome;
+                        font-weight: 600;
+                        font-style: normal;
+                        color: var.$primary-color;
+                        padding: 0 5px;
+                    }
+                    &::before {
+                        content: '\f017';
+                        font-family: var.$icon-font-awesome;
+                        font-style: normal;
+                        color: var.$primary-color;
+                        padding-right: 5px;
+                    }
+                }
+            }
+            &__description {
+                display: flex;
+                flex-direction: column;
+                &>img {
+                    box-shadow: 0px 5px 10px 0px rgb(11 11 11 / 14%);
+                }
+                &>p {
+                    @include gen.description($font-color: var.$font-color-4, $margin: 0);
+                    line-height: 28px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

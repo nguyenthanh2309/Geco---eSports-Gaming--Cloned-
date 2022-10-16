@@ -1,0 +1,110 @@
+@use 'variables' as var;
+@use 'generals' as gen;
+@use 'helper' as help;
+.just-for-gamers {
+    &-area {
+        background: url('../assets/backgrounds/just_gamer_bg.jpg') no-repeat center;
+        background-size: cover;
+        background-color: #f6f6f6;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 467px;
+            height: 169px;
+            background-image: url('../assets/backgrounds/gamers_bg_conve01.png');
+            background-repeat: no-repeat;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-47%);
+            display: block;
+            width: 420px;
+            height: 152px;
+            background-image: url('../assets/backgrounds/gamers_bg_conve02.png');
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        &>.padding-container {
+            padding: 130px 0 150px 0;
+        }
+    }
+    &__introducing {
+        @include gen.introducing($margin-bottom: 0);
+    }
+    &__title {
+        @include gen.title(#fff);
+        &>span {
+            color: var.$primary-color;
+        }
+    }
+    &__description {
+        @include gen.description(var.$font-color-6);
+    }
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 10px;
+        & li {
+            color: #fff;
+            font-family: var.$secondary-font;
+            & h5 {
+                font-size: 18px;
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+            & p {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 28px;
+                color: var.$font-color-6;
+                margin: 0;
+            }
+        }
+    }
+    &__icon {
+        width: 97px;
+        height: 97px;
+        background-image: url('../assets/illustrations/gamer_list_icon_bg.jpg');
+        position: relative;
+        border: 6px solid #333240;
+        float: left;
+        margin-right: 25px;
+        &>img {
+            position: absolute;
+            @include help.absCenter;
+        }
+    }
+    &__illustrations-container {
+        position: relative;
+        height: 100%;
+        &>img:first-child {
+            position: absolute;
+            @include help.absCenterY;
+            z-index: 2;
+        }
+        &>img:nth-child(2) {
+            position: absolute;
+            left: 20%;
+            bottom: 21%;
+        }
+        &>img:nth-child(3) {
+            position: absolute;
+            right: 0;
+        }
+        &>img:last-child {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translateX(-74.5%);
+        }
+    }
+}

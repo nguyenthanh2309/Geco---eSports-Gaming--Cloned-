@@ -1,0 +1,87 @@
+    @use 'variables' as var;
+    @use 'helper' as help;
+    @use 'animations' as *;
+    .slider-area {
+        height: 85vh;
+        .slider {
+            height: 100%;
+            position: relative;
+            background-image: url('/assets/slider/slider_bg.jpg');
+            background-size: cover;
+            background-position-x: center;
+            &__item {
+                &>.container-custom {
+                    height: auto;
+                }
+            }
+            &__content {
+                @include help.absCenterTranslate;
+                padding-top: 100px;
+                margin: 0 15px;
+                & h3 {
+                    font-family: var.$secondary-font;
+                    color: var.$primary-color;
+                    font-size: 1.375rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                & h1 {
+                    font-family: var.$primary-font;
+                    font-weight: 800;
+                    font-size: 90px;
+                    color: var.$secondary-color;
+                    letter-spacing: -3px;
+                    line-height: 81px;
+                    &>span {
+                        color: var.$primary-color;
+                    }
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+                & p {
+                    font-family: var.$secondary-font;
+                    font-size: 16px;
+                    color: var.$font-color-2;
+                    letter-spacing: var.$letter-spacing;
+                    line-height: 30px;
+                    font-weight: 100;
+                    letter-spacing: normal;
+                }
+            }
+            &__btn {
+                background-color: var.$primary-color;
+                border: none;
+                border-radius: 5px;
+            }
+            &__btn--next {
+                position: absolute;
+                right: 6%;
+                bottom: 47%;
+            }
+            &__btn--previous {
+                position: absolute;
+                left: 6%;
+                bottom: 47%;
+            }
+            &__illustrations {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                right: 7%;
+                bottom: 0;
+                &>img {
+                    margin-right: -30%;
+                }
+                z-index: 2;
+            }
+            &__circle {
+                position: absolute;
+                top: 4%;
+                right: 22%;
+                z-index: 1;
+                opacity: .1;
+                animation: spinningCircle 60s linear infinite;
+            }
+        }
+    }

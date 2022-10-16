@@ -1,0 +1,30 @@
+@use 'variables' as var;
+@use 'generals' as gen;
+@use 'helper' as help;
+.cta {
+    &-area {
+        background-image: url('../assets/backgrounds/cta_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    &__introducing {
+        @include gen.introducing($margin-bottom: 5%);
+    }
+    &__title {
+        @include gen.title(#fff,
+        $font-size: 50px);
+    }
+    &__description {
+        @include gen.description($font-color: var.$font-color-6, $margin: 0 0 10px 0);
+    }
+    &__content-container {
+        width: 100%;
+        @include help.absCenterY;
+    }
+    &__icon {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,58 @@
+@use 'variables' as var;
+@use 'generals' as gen;
+.just-feature-games {
+    &__introducing {
+        @include gen.introducing;
+    }
+    &__title {
+        @include gen.title($text-align: center);
+    }
+    &__description {
+        @include gen.description($text-align: center);
+    }
+    &__title-style {
+        display: flex;
+        justify-content: center;
+    }
+    &__game-container {
+        display: grid;
+        grid-template: repeat(2, minmax(auto, 1fr)) / repeat(3, minmax(auto, 1fr));
+        align-items: start;
+        &>div:nth-child(5) {
+            align-self: end;
+        }
+    }
+    &__item {
+        position: relative;
+        &>img {
+            display: inline-block;
+            box-shadow: 0px 1px 13px 0px rgb(12 11 15 / 32%);
+        }
+    }
+    &__description-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        &>h5 {
+            @include gen.title($font-color-primary: #fff, $font-size: 22px, $letter-spacing: 1px);
+            line-height: 28px;
+            margin-bottom: 5px;
+        }
+        &>p {
+            text-transform: uppercase;
+            font-family: var.$secondary-font;
+            color: #fff;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 500;
+            &::before {
+                content: '\f0f3';
+                font-family: 'Font Awesome 5 Free', sans-serif;
+                color: var.$primary-color;
+                margin-right: 5px;
+            }
+        }
+    }
+}

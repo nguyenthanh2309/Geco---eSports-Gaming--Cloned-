@@ -1,0 +1,78 @@
+@use 'variables' as var;
+@use 'generals' as gen;
+@use 'helper' as help;
+.gaming-products {
+    &-area {
+        background-color: var.$bg-color-4;
+    }
+    &__introducing {
+        @include gen.introducing;
+    }
+    &__title {
+        @include gen.title(#fff, $text-align: center);
+    }
+    &__description {
+        @include gen.description($text-align: center);
+    }
+    &__title-style {
+        display: flex;
+        justify-content: center;
+    }
+    &__carousel {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+        .carousel {
+            &__item {
+                position: relative;
+                background-color: var.$bg-color-5;
+                box-shadow: 0px 5px 12.09px 0.91px rgb(0 0 0 / 16%);
+                .item {
+                    &__category {
+                        position: absolute;
+                        left: 35%;
+                        bottom: 26%;
+                        text-transform: uppercase;
+                        font-family: var.$secondary-font;
+                        font-size: 12px;
+                        font-weight: 800;
+                        color: var.$font-color-5;
+                        background-color: var.$primary-color;
+                        display: inline-block;
+                        padding: 6px 20px;
+                        transform: skewX(-16deg);
+                    }
+                    &__content {
+                        font-family: var.$primary-font;
+                        font-weight: 800;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        padding: 30px 25px 10px 25px;
+                        &>h5 {
+                            font-size: 16px;
+                            font-weight: 800;
+                            color: #fff;
+                        }
+                        &>p {
+                            color: var.$primary-color;
+                            position: relative;
+                            &::after {
+                                position: absolute;
+                                @include help.absCenterY;
+                                right: 0;
+                                content: '\f291';
+                                font-family: 'Font Awesome 5 Free', sans-serif;
+                                font-size: 12px;
+                                padding: 5px;
+                                display: inline-block;
+                                background-color: #1c1a1d;
+                                border: 1px solid #2c2135;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

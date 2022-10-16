@@ -1,0 +1,103 @@
+@use 'variables' as var;
+.btn-wrapper {
+    display: inline-block;
+    padding-right: 15px;
+    margin-top: 30px;
+    position: relative;
+    &>button {
+        padding: 17px 35px;
+        background-color: var.$primary-color;
+        border: none;
+        text-transform: uppercase;
+        font-family: var.$secondary-font;
+        font-weight: 600;
+        font-size: 14px;
+        transform: skewX(-16deg);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        transform: skewX(-16deg);
+        background-color: var.$primary-color;
+        width: 5px;
+        height: 100%;
+    }
+}
+
+.padding-container {
+    padding: 100px 0 100px;
+}
+
+.padding-x-container {
+    padding: 0 260px;
+}
+
+.custom-container {
+    max-width: 1230px;
+}
+
+.nav--active {
+    background-color: var.$primary-color;
+    color: var.$font-color-5 !important;
+    transition: .5s;
+}
+
+.dropdown--active {
+    color: var.$primary-color !important;
+}
+
+.owl__button--active {
+    color: var.$primary-color;
+}
+
+@mixin introducing($flex-direction: column, $margin-bottom: 75px) {
+    display: flex;
+    flex-direction: $flex-direction;
+    margin-bottom: $margin-bottom;
+}
+
+@mixin title($font-color-primary: var.$font-color-5, $font-color-secondary: var.$primary-color, $font-size:36px, $font-weight: 800, $text-align: start, $letter-spacing: -2px) {
+    font-family: var.$primary-font;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $font-color-primary;
+    text-transform: uppercase;
+    text-align: $text-align;
+    letter-spacing: $letter-spacing;
+    &>span {
+        color: $font-color-secondary;
+    }
+}
+
+@mixin description($font-color: var.$font-color-4, $font-size: 15px, $text-align: start, $margin: 5px 0 25px) {
+    font-family: var.$secondary-font;
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: $text-align;
+    margin: $margin;
+}
+
+@mixin footerTitle {
+    font-size: 16px;
+    font-family: var.$primary-font;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-bottom: 20px;
+    color: #c8c8c8;
+    position: relative;
+    &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        background-color: var.$primary-color;
+    }
+}
