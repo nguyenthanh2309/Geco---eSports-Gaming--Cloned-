@@ -1,3 +1,27 @@
+@keyframes dropdownAppearence {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes dropdownDisappearence {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
 @keyframes spinningCircle {
     0% {
         transform: rotate(0);
@@ -31,5 +55,20 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes slideTextChanging {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    50% {
+        opacity: .4;
+        transform: translateY(5%);
+    }
+    100% {
+        opacity: .8;
+        transform: translateY(0);
     }
 }

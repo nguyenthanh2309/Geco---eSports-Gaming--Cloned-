@@ -10,9 +10,13 @@
         border: none;
         text-transform: uppercase;
         font-family: var.$secondary-font;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
         transform: skewX(-16deg);
+        &>span {
+            display: block;
+            transform: skewX(16deg);
+        }
     }
     &::after {
         content: '';
@@ -42,10 +46,6 @@
     background-color: var.$primary-color;
     color: var.$font-color-5 !important;
     transition: .5s;
-}
-
-.dropdown--active {
-    color: var.$primary-color !important;
 }
 
 .owl__button--active {

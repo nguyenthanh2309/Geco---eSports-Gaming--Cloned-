@@ -57,11 +57,13 @@
                 position: absolute;
                 right: 6%;
                 bottom: 47%;
+                z-index: 3;
             }
             &__btn--previous {
                 position: absolute;
                 left: 6%;
                 bottom: 47%;
+                z-index: 3;
             }
             &__illustrations {
                 position: absolute;

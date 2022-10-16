@@ -167,7 +167,6 @@ function renderProductsCategoryData() {
         });
 }
 
-
 renderReleashedGameData();
 renderFeatureGamesData();
 renderGamingProductsData();
