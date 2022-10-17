@@ -70,6 +70,28 @@
     color: var.$primary-color
 }
 
+.btn--navigate-to-top {
+    padding: 6px 14px 10px 14px;
+    position: fixed;
+    bottom: 5%;
+    right: 50px;
+    border: none;
+    background-color: var.$primary-color;
+    &>i {
+        color: var.$font-color-5;
+        vertical-align: middle;
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: #444;
+        transition: .3s ease-in-out;
+    }
+    &:hover>i {
+        color: var.$secondary-color;
+        transition: .3s ease-in-out;
+    }
+}
+
 @mixin introducing($flex-direction: column,
 $margin-bottom: 75px) {
     display: flex;

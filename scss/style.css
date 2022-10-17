@@ -118,6 +118,28 @@ h6 {
   color: #E4A101;
 }
 
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
 .top-contact-info {
   background-color: #111111;
   height: 45px;
@@ -481,6 +503,34 @@ h6 {
     opacity: 0.1;
   }
 }
+@-webkit-keyframes hoverToItem {
+  to {
+    transform: translateX(10px);
+    transition: 0.3s ease-in-out;
+    color: #E4A101;
+  }
+}
+@keyframes hoverToItem {
+  to {
+    transform: translateX(10px);
+    transition: 0.3s ease-in-out;
+    color: #E4A101;
+  }
+}
+@-webkit-keyframes unhoverToItem {
+  to {
+    transform: translateX(0);
+    transition: 0.3s ease-in-out;
+    color: #E4A101;
+  }
+}
+@keyframes unhoverToItem {
+  to {
+    transform: translateX(0);
+    transition: 0.3s ease-in-out;
+    color: #E4A101;
+  }
+}
 .slider-area {
   height: 85vh;
   -webkit-user-select: none;
@@ -646,6 +696,31 @@ h6 {
   transform: translateX(10px);
   transition: 0.3s ease-in-out;
   color: #E4A101;
+}
+
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
 }
 
 .releashed-game-area {
@@ -892,6 +967,31 @@ h6 {
   color: #E4A101;
 }
 
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
 .just-for-gamers-area {
   background: url("../assets/backgrounds/just_gamer_bg.jpg") no-repeat center;
   background-size: cover;
@@ -1098,6 +1198,31 @@ h6 {
   color: #E4A101;
 }
 
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
 .just-feature-games-area {
   background-image: url("../assets/backgrounds/featured_game_bg.png");
   background-size: cover;
@@ -1258,6 +1383,31 @@ h6 {
   color: #E4A101;
 }
 
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
 .cta-area {
   background-image: url("../assets/backgrounds/cta_bg.jpg");
   background-repeat: no-repeat;
@@ -1374,6 +1524,31 @@ h6 {
   transform: translateX(10px);
   transition: 0.3s ease-in-out;
   color: #E4A101;
+}
+
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
 }
 
 .gaming-products-area {
@@ -1547,6 +1722,31 @@ h6 {
   color: #E4A101;
 }
 
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
 .lastest-news-articles__introducing {
   display: flex;
   flex-direction: column;
@@ -1716,6 +1916,31 @@ h6 {
   color: #E4A101;
 }
 
+.btn--navigate-to-top {
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  background-color: #E4A101;
+}
+
+.btn--navigate-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--navigate-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--navigate-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
 .footer {
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -1747,96 +1972,90 @@ h6 {
 }
 .footer__input {
   position: relative;
-}
-.footer__input::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 0;
-  border-width: 0 0 55px 20px;
-  border-style: solid;
-  border-color: transparent transparent #262228 transparent;
-}
-.footer__input::after {
-  content: "";
-  position: absolute;
-  right: -20px;
-  top: 0;
-  border-width: 55px 20px 0 0;
-  border-style: solid;
-  border-color: #262228 transparent transparent transparent;
+  transform: skew(-18deg);
+  margin-right: -15px;
 }
 .footer__input > input[type=email] {
+  display: inline-block;
   width: 100%;
   background-color: #262228;
-  outline: none;
   border: none;
+  color: #FFFFFF;
+  outline: none;
   padding: 16px;
+  position: relative;
 }
 .footer__input > input[type=email]::-moz-placeholder {
+  display: inline-block;
+  transform: skewX(18deg);
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  margin-left: 40px;
+  padding-left: 20px;
   color: #90949c;
   font-weight: 600;
 }
 .footer__input > input[type=email]:-ms-input-placeholder {
+  display: inline-block;
+  transform: skewX(18deg);
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  margin-left: 40px;
+  padding-left: 20px;
   color: #90949c;
   font-weight: 600;
 }
 .footer__input > input[type=email]::placeholder {
+  display: inline-block;
+  transform: skewX(18deg);
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  margin-left: 40px;
+  padding-left: 20px;
   color: #90949c;
   font-weight: 600;
 }
 .footer__input > input[type=email]::-moz-placeholder::before {
-  content: "\f0e0";
+  content: "\f2b6";
   font-family: "Font Awesome 5 Free", sans-serif;
+  color: #E4A101;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .footer__input > input[type=email]:-ms-input-placeholder::before {
-  content: "\f0e0";
+  content: "\f2b6";
   font-family: "Font Awesome 5 Free", sans-serif;
+  color: #E4A101;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .footer__input > input[type=email]::placeholder::before {
-  content: "\f0e0";
+  content: "\f2b6";
   font-family: "Font Awesome 5 Free", sans-serif;
+  color: #E4A101;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .footer__btn-submit {
   background-color: #E4A101;
+  border: none;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1c1121;
   text-transform: uppercase;
   position: relative;
-  padding: 17px 15px;
+  padding: 17px 25px;
   margin-left: 5px;
+  transform: skewX(-18deg);
 }
-.footer__btn-submit::before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  top: 0;
-  border-width: 0 0 55px 20px;
-  border-style: solid;
-  border-color: transparent transparent #E4A101 transparent;
+.footer__btn-submit > span {
+  display: inline-block;
+  transform: skewX(18deg);
 }
-.footer__btn-submit::after {
-  content: "";
-  position: absolute;
-  right: -20px;
-  top: 0;
-  border-width: 55px 20px 0 0;
-  border-style: solid;
-  border-color: #E4A101 transparent transparent transparent;
-}
-.footer__btn-submit > i {
-  margin-left: 5px;
+.footer__btn-submit > span > i {
+  font-size: 12px;
+  margin-left: 8px;
 }
 .footer__btn-submit:hover {
   background-color: #FFFFFF;
@@ -2154,5 +2373,19 @@ h6 {
   from {
     top: -10%;
     opacity: 0.1;
+  }
+}
+@keyframes hoverToItem {
+  to {
+    transform: translateX(10px);
+    transition: 0.3s ease-in-out;
+    color: #E4A101;
+  }
+}
+@keyframes unhoverToItem {
+  to {
+    transform: translateX(0);
+    transition: 0.3s ease-in-out;
+    color: #E4A101;
   }
 }/*# sourceMappingURL=style.css.map */

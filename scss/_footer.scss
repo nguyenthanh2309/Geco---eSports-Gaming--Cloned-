@@ -22,74 +22,74 @@
     }
     &__input {
         position: relative;
-        &::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 0;
-            border-width: 0 0 55px 20px;
-            border-style: solid;
-            border-color: transparent transparent #262228 transparent;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            right: -20px;
-            top: 0;
-            border-width: 55px 20px 0 0;
-            border-style: solid;
-            border-color: #262228 transparent transparent transparent;
-        }
+        transform: skew(-18deg);
+        margin-right: -15px;
         &>input[type="email"] {
+            display: inline-block;
             width: 100%;
             background-color: #262228;
-            outline: none;
             border: none;
+            color: var.$secondary-color;
+            outline: none;
             padding: 16px;
+            position: relative;
             &::placeholder {
+                display: inline-block;
+                transform: skewX(18deg);
                 font-family: var.$secondary-font;
                 font-size: 14px;
-                margin-left: 40px;
+                padding-left: 20px;
                 color: var.$footer-font-color;
                 font-weight: 600;
                 &::before {
-                    content: '\f0e0';
+                    content: '\f2b6';
                     font-family: var.$icon-font-awesome;
+                    color: var.$primary-color;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
                 }
             }
         }
     }
     &__btn-submit {
         background-color: var.$primary-color;
+        border: none;
         font-family: var.$secondary-font;
         font-size: 14px;
-        font-weight: 800;
+        font-weight: 700;
         color: var.$font-color-5;
         text-transform: uppercase;
         position: relative;
-        padding: 17px 15px;
+        padding: 17px 25px;
         margin-left: 5px;
-        &::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 0;
-            border-width: 0 0 55px 20px;
-            border-style: solid;
-            border-color: transparent transparent var.$primary-color transparent;
+        transform: skewX(-18deg);
+        &>span {
+            display: inline-block;
+            transform: skewX(18deg);
+            &>i {
+                font-size: 12px;
+                margin-left: 8px;
+            }
         }
-        &::after {
-            content: '';
-            position: absolute;
-            right: -20px;
-            top: 0;
-            border-width: 55px 20px 0 0;
-            border-style: solid;
-            border-color: var.$primary-color transparent transparent transparent;
-        }
-        &>i {
-            margin-left: 5px;
-        }
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     left: -20px;
+        //     top: 0;
+        //     border-width: 0 0 55px 20px;
+        //     border-style: solid;
+        //     border-color: transparent transparent var.$primary-color transparent;
+        // }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     right: -20px;
+        //     top: 0;
+        //     border-width: 55px 20px 0 0;
+        //     border-style: solid;
+        //     border-color: var.$primary-color transparent transparent transparent;
+        // }
         &:hover {
             background-color: var.$secondary-color;
             color: var.$primary-color;
