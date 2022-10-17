@@ -1,4 +1,18 @@
 @use 'variables' as var;
+@use 'helper' as help;
+.preloader {
+    display: none;
+    background-color: #161417;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    &>img {
+        @include help.absCenter
+    }
+}
+
 .btn-wrapper {
     display: inline-block;
     padding-right: 15px;

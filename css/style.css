@@ -47,6 +47,21 @@ h6 {
   text-shadow: none;
 }
 
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -212,7 +227,7 @@ h6 {
 /* Navigation Bar */
 .nav {
   position: relative;
-  z-index: 9999;
+  z-index: 99;
 }
 .nav__container {
   background-image: url("../assets/backgrounds/header_bg.jpg");
@@ -647,6 +662,22 @@ h6 {
           animation: spinningCircle 60s linear infinite;
 }
 
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -918,6 +949,22 @@ h6 {
   position: absolute;
 }
 
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -1151,6 +1198,22 @@ h6 {
           animation: spinningCircle 60s linear infinite;
 }
 
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -1338,6 +1401,22 @@ h6 {
   margin-right: 5px;
 }
 
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -1481,6 +1560,22 @@ h6 {
 .cta__icon {
   display: inline-block;
   margin-bottom: 10px;
+}
+
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }
 
 .btn-wrapper {
@@ -1681,6 +1776,22 @@ h6 {
   color: #1c1121;
 }
 
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -1875,6 +1986,22 @@ h6 {
   margin: 0;
   line-height: 28px;
   font-weight: 500;
+}
+
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }
 
 .btn-wrapper {
