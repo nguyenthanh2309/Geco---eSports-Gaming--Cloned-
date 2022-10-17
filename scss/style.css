@@ -118,7 +118,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -126,16 +127,16 @@ h6 {
   border: none;
   background-color: #E4A101;
 }
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -531,6 +532,26 @@ h6 {
     color: #E4A101;
   }
 }
+@-webkit-keyframes buttonAppear {
+  from {
+    opacity: 0.5;
+  }
+}
+@keyframes buttonAppear {
+  from {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes buttonDisappear {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes buttonDisappear {
+  to {
+    opacity: 0;
+  }
+}
 .slider-area {
   height: 85vh;
   -webkit-user-select: none;
@@ -698,7 +719,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -707,18 +729,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -967,7 +989,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -976,18 +999,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -1198,7 +1221,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -1207,18 +1231,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -1383,7 +1407,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -1392,18 +1417,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -1526,7 +1551,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -1535,18 +1561,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -1722,7 +1748,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -1731,18 +1758,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -1916,7 +1943,8 @@ h6 {
   color: #E4A101;
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+  display: none;
   padding: 6px 14px 10px 14px;
   position: fixed;
   bottom: 5%;
@@ -1925,18 +1953,18 @@ h6 {
   background-color: #E4A101;
 }
 
-.btn--navigate-to-top > i {
+.btn--scroll-to-top > i {
   color: #1c1121;
   vertical-align: middle;
   font-size: 20px;
 }
 
-.btn--navigate-to-top:hover {
+.btn--scroll-to-top:hover {
   background-color: #444;
   transition: 0.3s ease-in-out;
 }
 
-.btn--navigate-to-top:hover > i {
+.btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
 }
@@ -2387,5 +2415,15 @@ h6 {
     transform: translateX(0);
     transition: 0.3s ease-in-out;
     color: #E4A101;
+  }
+}
+@keyframes buttonAppear {
+  from {
+    opacity: 0.5;
+  }
+}
+@keyframes buttonDisappear {
+  to {
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

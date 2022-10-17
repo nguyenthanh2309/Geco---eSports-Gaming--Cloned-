@@ -70,7 +70,8 @@
     color: var.$primary-color
 }
 
-.btn--navigate-to-top {
+.btn--scroll-to-top {
+    display: none;
     padding: 6px 14px 10px 14px;
     position: fixed;
     bottom: 5%;

@@ -112,3 +112,15 @@
         color: var.$primary-color;
     }
 }
+
+@keyframes buttonAppear {
+    from {
+        opacity: .5;
+    }
+}
+
+@keyframes buttonDisappear {
+    to {
+        opacity: 0;
+    }
+}

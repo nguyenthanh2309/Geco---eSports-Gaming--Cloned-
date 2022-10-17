@@ -165,6 +165,20 @@ function hoverToCatergoryList() {
     console.log(li)
 }
 
+function buttonScrollAppear() {
+    const btnScroll = document.querySelector(".btn--scroll-to-top");
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 255) {
+            btnScroll.style.animation = 'buttonAppear .2s ease-in-out'
+            setTimeout(() => btnScroll.style.display = 'block', 100);
+        } else {
+            btnScroll.style.animation = 'buttonDisappear .2s ease-in-out'
+            setTimeout(() => btnScroll.style.display = 'none', 100);
+        }
+    });
+}
+
 displayStickyNav();
 navItemHandleEvent();
 dropdownHandleEvent();
@@ -172,4 +186,5 @@ dropdownHandleEvent();
 buttonHandleEvent();
 // featureGamesHandleEvent();
 // carouselItemRoll();
-hoverToCatergoryList()
+hoverToCatergoryList();
+buttonScrollAppear();
