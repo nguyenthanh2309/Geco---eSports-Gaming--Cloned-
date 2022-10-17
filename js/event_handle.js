@@ -1,20 +1,17 @@
 function preload() {
     const preloader = document.querySelector(".preloader");
-    console.log(preloader)
 
     const loading = (elem) => elem.style.display = 'block';
     const loaded = (elem) => elem.style.display = 'none';
 
     document.addEventListener('readystatechange', () => {
-        if (document.readyState == 'complete') {
-            loaded(preloader);
-        } else {
+        if (document.readyState != 'complete') {
             loading(preloader);
+        } else {
+            loaded(preloader);
         }
     })
 }
-
-
 
 function navItemHandleEvent() {
     const navItems = document.querySelectorAll(".nav__item");
