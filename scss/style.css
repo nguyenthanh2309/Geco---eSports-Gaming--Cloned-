@@ -125,6 +125,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 .btn--scroll-to-top > i {
@@ -160,15 +161,15 @@ h6 {
 }
 .container-custom .offer-counter > span {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 25px;
   background-image: url("../assets/backgrounds/offer_count_bg.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #000;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
-  letter-spacing: 0.05rem;
 }
 .container-custom .contact-method-list {
   display: flex;
@@ -241,11 +242,12 @@ h6 {
   display: inline-block;
   font-family: "Oxanium", cursive;
   font-size: 14px;
-  color: #fff;
+  color: #edeaea;
   font-weight: 700;
   transform: skewX(-16deg);
   text-transform: uppercase;
-  padding: 11px 22px;
+  padding: 15px 23px;
+  line-height: 1;
 }
 .nav__item > span {
   display: block;
@@ -562,7 +564,7 @@ h6 {
 .slider-area .slider {
   height: 100%;
   position: relative;
-  background-image: url("../assets/slider/slider_bg.jpg");
+  background-image: url("../assets/slider/slider_bg02.jpg");
   background-size: cover;
   background-position-x: center;
 }
@@ -726,6 +728,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 
@@ -819,7 +822,7 @@ h6 {
 }
 .releashed-game__card-container .card__owl-buttons > li:first-child {
   position: relative;
-  color: #fff;
+  color: #E4A101;
 }
 .releashed-game__card-container .card__owl-buttons > li:first-child::before {
   content: "";
@@ -996,6 +999,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 
@@ -1228,6 +1232,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 
@@ -1414,6 +1419,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 
@@ -1558,6 +1564,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 
@@ -1755,6 +1762,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 
@@ -1950,6 +1958,7 @@ h6 {
   bottom: 5%;
   right: 50px;
   border: none;
+  z-index: 9999;
   background-color: #E4A101;
 }
 

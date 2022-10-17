@@ -54,7 +54,7 @@
                     padding: 10px;
                     &:first-child {
                         position: relative;
-                        color: #fff;
+                        color: var.$primary-color;
                         &::before {
                             content: '';
                             position: absolute;

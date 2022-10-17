@@ -16,15 +16,15 @@
         align-items: center;
         &>span {
             display: inline-block;
-            padding: 12px 20px;
+            padding: 12px 25px;
             background-image: url('../assets/backgrounds/offer_count_bg.png');
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             color: #000;
             font-family: var.$secondary-font;
             font-weight: 700;
             font-size: 1.125rem;
-            letter-spacing: var.$letter-spacing;
         }
     }
     .contact-method-list {
@@ -102,11 +102,12 @@
         display: inline-block;
         font-family: var.$primary-font;
         font-size: 14px;
-        color: #fff;
+        color: var.$nav-font-color;
         font-weight: 700;
         transform: skewX(-16deg);
         text-transform: uppercase;
-        padding: 11px 22px;
+        padding: 15px 23px;
+        line-height: 1;
         &>span {
             display: block;
             transform: skew(16deg);
