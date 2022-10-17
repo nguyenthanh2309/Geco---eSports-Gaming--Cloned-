@@ -52,13 +52,37 @@
     color: var.$primary-color;
 }
 
-@mixin introducing($flex-direction: column, $margin-bottom: 75px) {
+.hovered-item {
+    background-color: var.$primary-color;
+}
+
+.sticky-nav {
+    position: fixed;
+    padding: 0;
+    background-image: url('../assets/backgrounds/header_bg.jpg');
+    width: 100%;
+    top: 0;
+}
+
+.hover {
+    transform: translateX(10px);
+    transition: .3s ease-in-out;
+    color: var.$primary-color
+}
+
+@mixin introducing($flex-direction: column,
+$margin-bottom: 75px) {
     display: flex;
     flex-direction: $flex-direction;
     margin-bottom: $margin-bottom;
 }
 
-@mixin title($font-color-primary: var.$font-color-5, $font-color-secondary: var.$primary-color, $font-size:36px, $font-weight: 800, $text-align: start, $letter-spacing: -2px) {
+@mixin title($font-color-primary: var.$font-color-5,
+$font-color-secondary: var.$primary-color,
+$font-size:36px,
+$font-weight: 800,
+$text-align: start,
+$letter-spacing: -2px) {
     font-family: var.$primary-font;
     font-weight: $font-weight;
     font-size: $font-size;
@@ -71,7 +95,10 @@
     }
 }
 
-@mixin description($font-color: var.$font-color-4, $font-size: 15px, $text-align: start, $margin: 5px 0 25px) {
+@mixin description($font-color: var.$font-color-4,
+$font-size: 15px,
+$text-align: start,
+$margin: 5px 0 25px) {
     font-family: var.$secondary-font;
     font-size: $font-size;
     color: $font-color;

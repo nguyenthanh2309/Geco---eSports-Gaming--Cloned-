@@ -3,10 +3,11 @@
     @use 'animations' as *;
     .slider-area {
         height: 85vh;
+        user-select: none;
         .slider {
             height: 100%;
             position: relative;
-            background-image: url('/assets/slider/slider_bg.jpg');
+            background-image: url('../assets/slider/slider_bg.jpg');
             background-size: cover;
             background-position-x: center;
             &__item {

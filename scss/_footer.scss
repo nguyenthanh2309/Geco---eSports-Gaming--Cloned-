@@ -90,6 +90,11 @@
         &>i {
             margin-left: 5px;
         }
+        &:hover {
+            background-color: var.$secondary-color;
+            color: var.$primary-color;
+            transition: .5s ease-in-out;
+        }
     }
     &__main-content {
         padding-top: 50px;
@@ -123,10 +128,9 @@
             margin-right: 10px;
         }
     }
-    &__products-list {
+    &__category-list {
         font-size: 14px;
         font-weight: 500;
-        margin-left: 35px;
         &>h5 {
             @include gen.footerTitle;
             &::after {
@@ -146,6 +150,10 @@
             flex-direction: column;
             gap: 20px;
             margin-top: 45px;
+            &>li>a {
+                color: var.$footer-font-color;
+                display: inline-block;
+            }
         }
     }
     &__follow-info {
@@ -187,6 +195,7 @@
             &>input[type="email"] {
                 width: 100%;
                 background-color: #262228;
+                color: var.$secondary-color;
                 outline: none;
                 border: none;
                 padding: 13px;

@@ -7,6 +7,30 @@ function navItemHandleEvent() {
     }
 }
 
+function isInViewPort(element) {
+    const elemBounding = element.getBoundingClientRect();
+    return (
+        elemBounding.top >= 0 &&
+        elemBounding.left >= 0 &&
+        elemBounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        elemBounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function displayStickyNav() {
+    const nav = document.querySelector(".nav");
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 255) {
+            nav.classList.add('sticky-nav');
+            nav.style.animation = 'stickyNavAppearence 1s ease-in-out';
+        } else {
+            nav.classList.remove('sticky-nav');
+            nav.removeAttribute('style');
+        }
+    });
+}
+
 function dropdownHandleEvent() {
     const itemsHasDropdown = document.querySelectorAll(".item-dropdown");
     const dropdownMenus = document.querySelectorAll(".nav__item-dropdown");
@@ -31,11 +55,13 @@ function dropdownHandleEvent() {
         setTimeout(() => dropdown.style.display = 'none', 100);
     }
 
-    itemsHasDropdown[0].addEventListener('mouseover', () => {
-        dropdownMenus[0].style.animation = 'dropdownAppearence .2s linear';
-        setTimeout(() => dropdownMenus[0].style.display = 'block', 100);
-    });
+    multipleElementsEvent([itemsHasDropdown[0], dropdownMenus[0]], 'mouseover', displayDropdown.bind(null, itemsHasDropdown[0], dropdownMenus[0]));
+
     itemsHasDropdown[0].addEventListener('mouseleave', () => {
+        dropdownMenus[0].style.animation = 'dropdownDisappearence .2s linear';
+        setTimeout(() => dropdownMenus[0].style.display = 'none', 100);
+    });
+    dropdownMenus[0].addEventListener('mouseleave', () => {
         dropdownMenus[0].style.animation = 'dropdownDisappearence .2s linear';
         setTimeout(() => dropdownMenus[0].style.display = 'none', 100);
     });
@@ -49,9 +75,11 @@ function dropdownHandleEvent() {
 }
 
 function sliderHandleEvent() {
-    const sliderBtns = document.querySelectorAll(".slider__btn");
-    const sliderItem = document.querySelector(".slider__item");
-    const sliderTexts = sliderItem.querySelectorAll('h3, h1, p');
+    const previousBtn = document.querySelector(".slider__btn--previous");
+    const nextBtn = document.querySelector(".slider__btn--next");
+    const sliderImgs = ['../assets/slider/slider_bg.jpg', '../assets/slider/slider_bg02.jpg']
+    const slide = document.querySelector(".slider");
+    const sliderTexts = slide.querySelectorAll('h3, h1, p');
 
     function slideTextAppear() {
         for (let i = 0; i < sliderTexts.length - 1; i++) {
@@ -59,16 +87,89 @@ function sliderHandleEvent() {
         }
         sliderTexts[sliderTexts.length - 1].style.animation = 'slideTextChanging .8s ease-in-out .2s';
     }
-    sliderBtns.forEach(btn => btn.addEventListener('click', () => {
-        if (!btn.style.animation) {
-            slideTextAppear();
-        } else {
-            sliderTexts.forEach(text => text.style.removeProperty('animation'));
-            console.log('remove')
-        }
+
+    nextBtn.addEventListener('click', () => {
+        changeSlide();
+        slideTextAppear();
+    })
+
+}
+
+function buttonHandleEvent() {
+    const buttons = document.querySelectorAll(".btn-wrapper");
+
+    buttons.forEach(button => button.addEventListener('mouseover', () => {
+        button.style.animation = 'buttonHovered .5s ease-in-out';
+        setTimeout(() => button.style.paddingRight = 0, 400);
+    }));
+    buttons.forEach(button => button.addEventListener('mouseleave', () => {
+        button.style.animation = 'buttonUnhovered .5s ease-in-out';
+        setTimeout(() => button.style.paddingRight = '15px', 400);
     }));
 }
 
+function featureGamesHandleEvent() {
+    const items = document.querySelectorAll(".just-feature-games__item");
+
+    console.log(items[0])
+
+    const hoveredItem = document.createElement('div');
+    hoveredItem.classList.add('hovered-item');
+
+    const icon = document.createElement('img');
+    icon.setAttribute('src', './assets/illustrations/featured_game_icon.png');
+
+    const content = document.createElement('div');
+    content.classList.add('.just-feature-games__content-wrapper');
+
+    content.innerHTML = `<h5>just for gamers</h5>
+        <p>playstation 5 , xbox</p>`
+
+    function hoverToItem() {
+        hoveredItem.appendChild(icon);
+        hoveredItem.appendChild(content);
+
+        items.forEach(item => item.appendChild(hoveredItem));
+
+        console.log('hovered');
+    }
+
+    function unhoverToItem() {
+        items.forEach(item => item.removeChild(hoveredItem))
+    }
+
+    items.forEach(item => item.addEventListener('mouseover', () => {
+        hoverToItem();
+    }));
+    items.forEach(item => item.addEventListener('mouseleave', unhoverToItem));
+}
+
+function carouselItemRoll() {
+    const carousel = document.querySelector(".gaming-products__carousel");
+
+    carousel.addEventListener('mousemove', (e) => {
+        let currentOffset = e.offsetX;
+
+        if (e.offsetX > currentOffset) {
+            carousel.style.transform = `translateX(${currentOffset}px)`;
+        } else {
+            carousel.style.transform = `translateX(${-currentOffset}px)`
+        }
+        currentOffset = e.offsetX;
+    })
+}
+
+function hoverToCatergoryList() {
+    const categoryList = document.querySelector(".footer__category-list");
+    const li = categoryList.querySelector('a');
+    console.log(li)
+}
+
+displayStickyNav();
 navItemHandleEvent();
 dropdownHandleEvent();
-sliderHandleEvent();
+// sliderHandleEvent();
+buttonHandleEvent();
+// featureGamesHandleEvent();
+// carouselItemRoll();
+hoverToCatergoryList()

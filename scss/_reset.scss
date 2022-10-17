@@ -34,3 +34,9 @@ h6 {
     margin: 0;
     display: inline-block;
 }
+
+::selection {
+    background-color: #444;
+    color: #fff;
+    text-shadow: none;
+}

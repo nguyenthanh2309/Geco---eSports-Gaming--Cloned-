@@ -35,6 +35,18 @@ h6 {
   display: inline-block;
 }
 
+::-moz-selection {
+  background-color: #444;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #444;
+  color: #fff;
+  text-shadow: none;
+}
+
 .btn-wrapper {
   display: inline-block;
   padding-right: 15px;
@@ -85,6 +97,24 @@ h6 {
 }
 
 .owl__button--active {
+  color: #E4A101;
+}
+
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
   color: #E4A101;
 }
 
@@ -392,8 +422,12 @@ h6 {
     opacity: 0.4;
     transform: translateY(5%);
   }
-  100% {
+  75% {
     opacity: 0.8;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -406,18 +440,58 @@ h6 {
     opacity: 0.4;
     transform: translateY(5%);
   }
-  100% {
+  75% {
     opacity: 0.8;
     transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes buttonHovered {
+  to {
+    padding-right: 0;
+  }
+}
+@keyframes buttonHovered {
+  to {
+    padding-right: 0;
+  }
+}
+@-webkit-keyframes buttonUnhovered {
+  to {
+    padding-right: 15px;
+  }
+}
+@keyframes buttonUnhovered {
+  to {
+    padding-right: 15px;
+  }
+}
+@-webkit-keyframes stickyNavAppearence {
+  from {
+    top: -10%;
+    opacity: 0.1;
+  }
+}
+@keyframes stickyNavAppearence {
+  from {
+    top: -10%;
+    opacity: 0.1;
   }
 }
 .slider-area {
   height: 85vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .slider-area .slider {
   height: 100%;
   position: relative;
-  background-image: url("/assets/slider/slider_bg.jpg");
+  background-image: url("../assets/slider/slider_bg.jpg");
   background-size: cover;
   background-position-x: center;
 }
@@ -553,6 +627,24 @@ h6 {
 }
 
 .owl__button--active {
+  color: #E4A101;
+}
+
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
   color: #E4A101;
 }
 
@@ -782,6 +874,24 @@ h6 {
   color: #E4A101;
 }
 
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+  color: #E4A101;
+}
+
 .just-for-gamers-area {
   background: url("../assets/backgrounds/just_gamer_bg.jpg") no-repeat center;
   background-size: cover;
@@ -882,6 +992,10 @@ h6 {
   inset: 0;
   margin: auto;
 }
+.just-for-gamers__icon:hover {
+  border-color: #E4A101;
+  transition: 0.5s ease-in-out;
+}
 .just-for-gamers__illustrations-container {
   position: relative;
   height: 100%;
@@ -904,9 +1018,10 @@ h6 {
 }
 .just-for-gamers__illustrations-container > img:last-child {
   position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-74.5%);
+  left: 37%;
+  bottom: 55px;
+  -webkit-animation: spinningCircle 60s linear infinite;
+          animation: spinningCircle 60s linear infinite;
 }
 
 .btn-wrapper {
@@ -965,6 +1080,29 @@ h6 {
   color: #E4A101;
 }
 
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+  color: #E4A101;
+}
+
+.just-feature-games-area {
+  background-image: url("../assets/backgrounds/featured_game_bg.png");
+  background-size: cover;
+  background-position: center;
+}
 .just-feature-games__introducing {
   display: flex;
   flex-direction: column;
@@ -1010,28 +1148,28 @@ h6 {
   display: inline-block;
   box-shadow: 0px 1px 13px 0px rgba(12, 11, 15, 0.32);
 }
-.just-feature-games__description-container {
+.just-feature-games__content-wrapper {
   position: absolute;
   left: 0;
   bottom: 0;
   margin-left: 30px;
   margin-bottom: 20px;
 }
-.just-feature-games__description-container > h5 {
+.just-feature-games__content-wrapper > h5 {
   font-family: "Oxanium", cursive;
   font-weight: 800;
   font-size: 22px;
   color: #fff;
   text-transform: uppercase;
   text-align: start;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
   line-height: 28px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
-.just-feature-games__description-container > h5 > span {
+.just-feature-games__content-wrapper > h5 > span {
   color: #E4A101;
 }
-.just-feature-games__description-container > p {
+.just-feature-games__content-wrapper > p {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -1039,7 +1177,7 @@ h6 {
   line-height: 18px;
   font-weight: 500;
 }
-.just-feature-games__description-container > p::before {
+.just-feature-games__content-wrapper > p::before {
   content: "\f0f3";
   font-family: "Font Awesome 5 Free", sans-serif;
   color: #E4A101;
@@ -1099,6 +1237,24 @@ h6 {
 }
 
 .owl__button--active {
+  color: #E4A101;
+}
+
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
   color: #E4A101;
 }
 
@@ -1202,6 +1358,24 @@ h6 {
   color: #E4A101;
 }
 
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+  color: #E4A101;
+}
+
 .gaming-products-area {
   background-color: #1c181e;
 }
@@ -1237,7 +1411,7 @@ h6 {
 }
 .gaming-products__carousel {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   overflow: hidden;
 }
 .gaming-products__carousel .carousel__item {
@@ -1258,6 +1432,10 @@ h6 {
   display: inline-block;
   padding: 6px 20px;
   transform: skewX(-16deg);
+}
+.gaming-products__carousel .carousel__item .item__category > span {
+  display: block;
+  transform: skewX(16deg);
 }
 .gaming-products__carousel .carousel__item .item__content {
   font-family: "Oxanium", cursive;
@@ -1285,10 +1463,14 @@ h6 {
   content: "\f291";
   font-family: "Font Awesome 5 Free", sans-serif;
   font-size: 12px;
-  padding: 5px;
+  padding: 10px;
   display: inline-block;
   background-color: #1c1a1d;
   border: 1px solid #2c2135;
+}
+.gaming-products__carousel .carousel__item .item__content > p::after:hover {
+  background-color: #E4A101;
+  color: #1c1121;
 }
 
 .btn-wrapper {
@@ -1344,6 +1526,24 @@ h6 {
 }
 
 .owl__button--active {
+  color: #E4A101;
+}
+
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
   color: #E4A101;
 }
 
@@ -1498,6 +1698,24 @@ h6 {
   color: #E4A101;
 }
 
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+  color: #E4A101;
+}
+
 .footer {
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -1620,6 +1838,11 @@ h6 {
 .footer__btn-submit > i {
   margin-left: 5px;
 }
+.footer__btn-submit:hover {
+  background-color: #FFFFFF;
+  color: #E4A101;
+  transition: 0.5s ease-in-out;
+}
 .footer__main-content {
   padding-top: 50px;
   font-weight: 600;
@@ -1652,13 +1875,12 @@ h6 {
   font-weight: 600;
   margin-right: 10px;
 }
-.footer__products-list {
+.footer__category-list {
   font-size: 14px;
   font-weight: 500;
-  margin-left: 35px;
   text-transform: capitalize;
 }
-.footer__products-list > h5 {
+.footer__category-list > h5 {
   font-size: 16px;
   font-family: "Oxanium", cursive;
   font-weight: 900;
@@ -1668,7 +1890,7 @@ h6 {
   color: #c8c8c8;
   position: relative;
 }
-.footer__products-list > h5::after {
+.footer__category-list > h5::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1678,7 +1900,7 @@ h6 {
   bottom: 0;
   background-color: #E4A101;
 }
-.footer__products-list > h5::after {
+.footer__category-list > h5::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1688,11 +1910,15 @@ h6 {
   bottom: 0;
   background-color: #E4A101;
 }
-.footer__products-list > ul {
+.footer__category-list > ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 45px;
+}
+.footer__category-list > ul > li > a {
+  color: #90949c;
+  display: inline-block;
 }
 .footer__follow-info > h5 {
   font-size: 16px;
@@ -1765,6 +1991,7 @@ h6 {
 .footer__newsletter > form > input[type=email] {
   width: 100%;
   background-color: #262228;
+  color: #FFFFFF;
   outline: none;
   border: none;
   padding: 13px;
@@ -1904,8 +2131,28 @@ h6 {
     opacity: 0.4;
     transform: translateY(5%);
   }
-  100% {
+  75% {
     opacity: 0.8;
     transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes buttonHovered {
+  to {
+    padding-right: 0;
+  }
+}
+@keyframes buttonUnhovered {
+  to {
+    padding-right: 15px;
+  }
+}
+@keyframes stickyNavAppearence {
+  from {
+    top: -10%;
+    opacity: 0.1;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -82,6 +82,10 @@
             position: absolute;
             @include help.absCenter;
         }
+        &:hover {
+            border-color: var.$primary-color;
+            transition: .5s ease-in-out;
+        }
     }
     &__illustrations-container {
         position: relative;
@@ -102,9 +106,9 @@
         }
         &>img:last-child {
             position: absolute;
-            left: 50%;
-            bottom: 10%;
-            transform: translateX(-74.5%);
+            left: 37%;
+            bottom: 55px;
+            animation: spinningCircle 60s linear infinite;
         }
     }
 }

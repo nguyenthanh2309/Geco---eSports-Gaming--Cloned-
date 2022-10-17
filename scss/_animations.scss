@@ -67,8 +67,47 @@
         opacity: .4;
         transform: translateY(5%);
     }
-    100% {
+    75% {
         opacity: .8;
         transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonHovered {
+    to {
+        padding-right: 0;
+    }
+}
+
+@keyframes buttonUnhovered {
+    to {
+        padding-right: 15px;
+    }
+}
+
+@keyframes stickyNavAppearence {
+    from {
+        top: -10%;
+        opacity: .1;
+    }
+}
+
+@keyframes hoverToItem {
+    to {
+        transform: translateX(10px);
+        transition: .3s ease-in-out;
+        color: var.$primary-color;
+    }
+}
+
+@keyframes unhoverToItem {
+    to {
+        transform: translateX(0);
+        transition: .3s ease-in-out;
+        color: var.$primary-color;
     }
 }

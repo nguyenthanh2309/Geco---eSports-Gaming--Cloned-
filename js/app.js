@@ -48,7 +48,7 @@ function renderFeatureGamesData() {
                 spanText.innerHTML = users[i].split(' ').slice(2).join(' ');
 
                 const descriptionContainer = document.createElement('div');
-                descriptionContainer.classList.add('just-feature-games__description-container');
+                descriptionContainer.classList.add('just-feature-games__content-wrapper');
 
                 const user = document.createElement('h5');
                 user.innerHTML = users[i].split(' ').slice(0, 2).join(' ').concat('                  ');
@@ -64,6 +64,7 @@ function renderFeatureGamesData() {
                 appendMutipleChilds(featureGamesItem, image, descriptionContainer);
 
                 featureGamesContainer.appendChild(featureGamesItem);
+
             }
         });
 }
@@ -85,7 +86,7 @@ function renderGamingProductsData() {
 
                 const productCategory = document.createElement('div');
                 productCategory.classList.add('item__category')
-                productCategory.innerHTML = categories[i];
+                productCategory.innerHTML = `<span>${categories[i]}</span>`;
 
                 const gameProductsContent = document.createElement('div');
                 gameProductsContent.classList.add('item__content');
@@ -148,7 +149,7 @@ function renderNewsArticlesData() {
 };
 
 function renderProductsCategoryData() {
-    const listProducts = document.querySelector(".footer__products-list");
+    const listProducts = document.querySelector(".footer__category-list");
 
     fetch('https://mocki.io/v1/4e2709d4-207d-48f7-8019-78d92924e097')
         .then(res => res.json())
@@ -159,7 +160,7 @@ function renderProductsCategoryData() {
             const list = document.createElement('ul');
             for (let i = 0; i < datas.length; i++) {
                 const listItem = document.createElement('li');
-                listItem.innerHTML = `${categories[i]}(${products[i].length})`;
+                listItem.innerHTML = `<a href="">${categories[i]}(${products[i].length})</a>`;
                 list.appendChild(listItem);
             }
 
