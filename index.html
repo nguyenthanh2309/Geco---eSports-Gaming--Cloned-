@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="./js/app.js" defer></script>
+    <script type="module" src="./js/app.js" defer></script>
+    <script type="module" src="./js/helper.js" defer></script>
     <script type="module" src="./js/event_handle.js" defer></script>
     <title>Geco - eSports Gaming</title>
 </head>
@@ -23,7 +25,7 @@
     <!-- Header -->
     <header id="header">
         <!-- Top contact -->
-        <div class="top-contact-info">
+        <div class="top-contact-info d-lg-block d-none">
             <div class="container container-custom">
                 <div class="row h-100">
                     <div class="col-12 d-flex justify-content-between align-items-center p-0">
@@ -114,7 +116,26 @@
                                     </ul>
                                 </li>
                                 <a href="" class="nav__item"><span>contact</span></a>
-                                <a class="nav__cart"><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a class="nav__cart">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </a>
+                                <div class="minicart">
+                                    <div class="cart__product">
+                                        <img src="" alt="" class="product-img">
+                                        <div class="product-content">
+                                            <a href="" class="product-name">
+                                            </a>
+                                            <p class="product-price">
+                                                <span class="product-new-price"></span>
+                                                <span class="product-old-price"></span>
+                                            </p>
+                                        </div>
+                                        <button class="product-delete"><i class="fa-solid fa-trash-can"></i></button>
+                                    </div>
+                                    <p class="total-price">Total:<span></span></p>
+                                    <a href="" class="cart__link">shopping cart</a>
+                                    <a href="" class="cart__checkout">check out</a>
+                                </div>
                                 <button class="nav__search-btn-wrapper"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </div>
@@ -124,6 +145,12 @@
             <!-- -------- -->
         </div>
     </header>
+    <div class="search-model">
+        <form action=>
+            <input type="text" placeholder="Search here...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
     <!-- --------- -->
 
     <!-- Slider -->

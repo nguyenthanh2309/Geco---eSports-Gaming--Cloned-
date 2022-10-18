@@ -19,16 +19,18 @@
     margin-top: 30px;
     position: relative;
     &>button {
-        padding: 17px 35px;
+        padding: 16px 35px;
         background-color: var.$primary-color;
         border: none;
         text-transform: uppercase;
         font-family: var.$secondary-font;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 15px;
         transform: skewX(-16deg);
         &>span {
-            display: block;
+            color: var.$font-color-5;
+            vertical-align: middle;
+            display: inline-block;
             transform: skewX(16deg);
         }
     }
@@ -106,6 +108,61 @@
         color: var.$secondary-color;
         transition: .3s ease-in-out;
     }
+}
+
+.search {
+    &-model {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(23, 26, 33, .95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        &>form {
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &>input {
+                color: var.$secondary-color;
+                font-size: 36px;
+                outline: none;
+                background-color: transparent;
+                border: none;
+                border-bottom: 3px solid rgba(255, 255, 255, .1);
+                padding: 23px 0;
+                width: 555px;
+                &::placeholder {
+                    font-family: var.$secondary-font;
+                    font-size: 36px;
+                    color: rgba(255, 255, 255, .3);
+                }
+            }
+            &>button {
+                @include help.absCenterY;
+                right: 0;
+                background-color: transparent;
+                border: none;
+                &>i {
+                    color: var.$primary-color;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@mixin submenu($border: 1px solid #3a2746,
+$box-shadow: 0px 30px 70px 0px rgb(137 139 142 / 15%),
+$border-radius: 2px,
+$background-color: var.$bg-color-2) {
+    border: $border;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    background-color: var.$bg-color-2;
 }
 
 @mixin introducing($flex-direction: column,

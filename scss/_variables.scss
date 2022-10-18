@@ -1,3 +1,4 @@
+@use 'sass:map';
 $primary-font: 'Oxanium',
 cursive;
 $secondary-font: 'Poppins',
@@ -22,3 +23,15 @@ $font-color-7: #7f7a84;
 $nav-font-color: #edeaea;
 $footer-font-color: #90949c;
 $letter-spacing: 0.05rem;
+$media-breakpoints: ("sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px);
+@mixin tabletBreakpoints {
+    @media screen and (min-width: map.get($media-breakpoints, "md")) and (max-width: map.get($media-breakpoints, "xl")) {
+        @content;
+    }
+}
+
+@mixin mobileBreakpoints {
+    @media screen and (max-width: map.get($media-breakpoints, "sm")) {
+        @content;
+    }
+}

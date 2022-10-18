@@ -1,3 +1,5 @@
+import { multipleElementsEventListener } from './helper.js';
+
 function preload() {
     const preloader = document.querySelector(".preloader");
 
@@ -20,16 +22,6 @@ function navItemHandleEvent() {
         navItems[i].addEventListener('mouseover', () => navItems[i].classList.add('nav--active'));
         navItems[i].addEventListener('mouseleave', () => navItems[i].classList.remove('nav--active'));
     }
-}
-
-function isInViewPort(element) {
-    const elemBounding = element.getBoundingClientRect();
-    return (
-        elemBounding.top >= 0 &&
-        elemBounding.left >= 0 &&
-        elemBounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        elemBounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
 }
 
 function displayStickyNav() {
@@ -87,6 +79,54 @@ function dropdownHandleEvent() {
 
         multipleElementsEvent([itemsHasDropdown[i], dropdownMenus[i]], 'mouseleave', hideDropdown.bind(null, itemsHasDropdown[i], dropdownMenus[i]));
     }
+}
+
+function minicartHandleEvent() {
+    const cart = document.querySelector(".nav__cart");
+    const minicart = document.querySelector(".minicart");
+
+    function displayMinicart() {
+        minicart.style.animation = 'minicartAppearence .3s ease-in-out';
+        setTimeout(() => minicart.style.display = 'block', 200);
+    }
+
+    function hideMinicart() {
+        minicart.style.animation = 'minicartDisappearence .3s ease-in-out';
+        setTimeout(() => minicart.style.display = 'none', 200);
+    }
+
+    function holdMinicartAppearence() {
+        minicart.style.display = 'block';
+    }
+
+    cart.addEventListener('mouseover', displayMinicart);
+    minicart.addEventListener('mouseover', holdMinicartAppearence);
+    multipleElementsEventListener([cart, minicart], 'mouseleave', hideMinicart);
+}
+
+function searchButtonHandleEvent() {
+    const searchBtn = document.querySelector(".nav__search-btn-wrapper");
+    const searchModel = document.querySelector(".search-model");
+
+    function displaySearchModel() {
+        searchModel.style.animation = 'fadeIn .2s ease-in-out';
+        setTimeout(() => {
+            searchModel.style.display = 'block';
+        }, 100);
+    }
+
+    function hideSearchModel() {
+        searchModel.style.animation = 'fadeOut .3s ease-in-out';
+        setTimeout(() => {
+            searchModel.style.display = 'none';
+        }, 200);
+    }
+
+    searchBtn.addEventListener('click', displaySearchModel);
+    searchModel.addEventListener('click', (e) => {
+        hideSearchModel();
+        e.stopPropagation();
+    });
 }
 
 function sliderHandleEvent() {
@@ -198,6 +238,8 @@ preload();
 displayStickyNav();
 navItemHandleEvent();
 dropdownHandleEvent();
+minicartHandleEvent();
+searchButtonHandleEvent();
 // sliderHandleEvent();
 buttonHandleEvent();
 // featureGamesHandleEvent();

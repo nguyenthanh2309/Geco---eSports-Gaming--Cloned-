@@ -69,17 +69,19 @@ h6 {
   position: relative;
 }
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 .btn-wrapper::after {
@@ -155,6 +157,242 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
+}
+
+.preloader {
+  display: none;
+  background-color: #161417;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.preloader > img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.btn-wrapper {
+  display: inline-block;
+  padding-right: 15px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.btn-wrapper > button {
+  padding: 16px 35px;
+  background-color: #E4A101;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  transform: skewX(-16deg);
+}
+
+.btn-wrapper > button > span {
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
+  transform: skewX(16deg);
+}
+
+.btn-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  transform: skewX(-16deg);
+  background-color: #E4A101;
+  width: 5px;
+  height: 100%;
+}
+
+.padding-container {
+  padding: 100px 0 100px;
+}
+
+.padding-x-container {
+  padding: 0 260px;
+}
+
+.custom-container {
+  max-width: 1230px;
+}
+
+.nav--active {
+  background-color: #E4A101;
+  color: #1c1121 !important;
+  transition: 0.5s;
+}
+
+.owl__button--active {
+  color: #E4A101;
+}
+
+.hovered-item {
+  background-color: #E4A101;
+}
+
+.sticky-nav {
+  position: fixed;
+  padding: 0;
+  background-image: url("../assets/backgrounds/header_bg.jpg");
+  width: 100%;
+  top: 0;
+}
+
+.hover {
+  transform: translateX(10px);
+  transition: 0.3s ease-in-out;
+  color: #E4A101;
+}
+
+.btn--scroll-to-top {
+  display: none;
+  padding: 6px 14px 10px 14px;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  border: none;
+  z-index: 9999;
+  background-color: #E4A101;
+}
+
+.btn--scroll-to-top > i {
+  color: #1c1121;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.btn--scroll-to-top:hover {
+  background-color: #444;
+  transition: 0.3s ease-in-out;
+}
+
+.btn--scroll-to-top:hover > i {
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .top-contact-info {
@@ -253,6 +491,88 @@ h6 {
 .nav__item-list > li:first-child > ul > li:first-child > a {
   color: #E4A101;
 }
+.nav__item-list > .minicart {
+  border: none;
+  box-shadow: 0px 12px 24px 0px rgba(120, 120, 120, 0.3);
+  border-radius: 2px;
+  background-color: #1c1421;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 18%;
+  width: 350px;
+  padding: 25px 25px 40px;
+}
+.nav__item-list > .minicart > .cart__product {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #3a2746;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+.nav__item-list > .minicart > .cart__product .product-content {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.nav__item-list > .minicart > .cart__product .product-img {
+  width: 100px;
+}
+.nav__item-list > .minicart > .cart__product .product-name {
+  display: inline-block;
+  color: #edeaea;
+  font-size: 14px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+.nav__item-list > .minicart > .cart__product .product-delete {
+  border: none;
+  background-color: transparent;
+  color: #E4A101;
+}
+.nav__item-list > .minicart > .cart__product .product-new-price {
+  font-weight: 500;
+  color: #A5A5A5;
+  font-size: 13px;
+}
+.nav__item-list > .minicart > .cart__product .product-old-price {
+  font-weight: 500;
+  color: #A5A5A5;
+  opacity: 0.5;
+  font-size: 13px;
+  text-decoration: line-through;
+}
+.nav__item-list > .minicart > .cart__link, .nav__item-list > .minicart > .cart__checkout {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+.nav__item-list > .minicart > .cart__link {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #E4A101;
+  color: #1c1121;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.nav__item-list > .minicart > .cart__checkout {
+  font-size: 14px;
+  background-color: #291b35;
+  color: #edeaea;
+  letter-spacing: 2px;
+}
+.nav__item-list > .minicart .total-price {
+  padding: 25px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #A5A5A5;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
 .nav__item {
   display: inline-block;
   font-family: "Oxanium", cursive;
@@ -273,6 +593,7 @@ h6 {
   border: 1px solid #3a2746;
   box-shadow: 0px 30px 70px 0px rgba(137, 139, 142, 0.15);
   border-radius: 2px;
+  background-color: #1c1421;
   position: absolute;
   left: -9px;
   top: 100%;
@@ -282,7 +603,6 @@ h6 {
   text-transform: uppercase;
   transform-origin: center top;
   white-space: nowrap;
-  background-color: #1c1421;
   padding: 18px 100px 18px 0;
 }
 .nav__item-dropdown > li > a {
@@ -327,15 +647,14 @@ h6 {
 .nav__search-btn-wrapper {
   display: inline-block;
   color: #E4A101;
-  margin-bottom: 5px;
-  padding: 5px 20px 10px;
+  padding: 5px 20px 14px;
   background-color: #111111;
   border-radius: 5px;
-  margin-right: -20px;
   box-shadow: 0px 3px 7px 0px rgba(128, 18, 40, 0.2), inset 0px 3px 7px 0px rgba(56, 17, 33, 0.4);
 }
 .nav__search-btn-wrapper > i {
   font-size: 13px;
+  vertical-align: middle;
 }
 
 /* -------------- */
@@ -381,6 +700,46 @@ h6 {
   }
   100% {
     transform: scale(0);
+  }
+}
+@-webkit-keyframes minicartAppearence {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes minicartAppearence {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes minicartDisappearence {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+}
+@keyframes minicartDisappearence {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.2;
   }
 }
 @-webkit-keyframes spinningCircle {
@@ -511,13 +870,13 @@ h6 {
 }
 @-webkit-keyframes stickyNavAppearence {
   from {
-    top: -10%;
+    top: -30px;
     opacity: 0.1;
   }
 }
 @keyframes stickyNavAppearence {
   from {
-    top: -10%;
+    top: -30px;
     opacity: 0.1;
   }
 }
@@ -565,6 +924,32 @@ h6 {
   }
 }
 @keyframes buttonDisappear {
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.6;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
   to {
     opacity: 0;
   }
@@ -686,18 +1071,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -777,6 +1164,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .releashed-game-area {
@@ -973,18 +1422,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -1064,6 +1515,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .just-for-gamers-area {
@@ -1222,18 +1735,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -1313,6 +1828,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .just-feature-games-area {
@@ -1425,18 +2002,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -1516,6 +2095,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .cta-area {
@@ -1586,18 +2227,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -1677,6 +2320,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .gaming-products-area {
@@ -1800,18 +2505,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -1891,6 +2598,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .lastest-news-articles__introducing {
@@ -2012,18 +2781,20 @@ h6 {
 }
 
 .btn-wrapper > button {
-  padding: 17px 35px;
+  padding: 16px 35px;
   background-color: #E4A101;
   border: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   transform: skewX(-16deg);
 }
 
 .btn-wrapper > button > span {
-  display: block;
+  color: #1c1121;
+  vertical-align: middle;
+  display: inline-block;
   transform: skewX(16deg);
 }
 
@@ -2103,6 +2874,68 @@ h6 {
 .btn--scroll-to-top:hover > i {
   color: #FFFFFF;
   transition: 0.3s ease-in-out;
+}
+
+.search-model {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 33, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.search-model > form {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-model > form > input {
+  color: #FFFFFF;
+  font-size: 36px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 23px 0;
+  width: 555px;
+}
+
+.search-model > form > input::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-model > form > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.search-model > form > button > i {
+  color: #E4A101;
+  font-size: 30px;
 }
 
 .footer {
@@ -2470,6 +3303,26 @@ h6 {
     transform: scale(0);
   }
 }
+@keyframes minicartAppearence {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes minicartDisappearence {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+}
 @keyframes spinningCircle {
   0% {
     transform: rotate(0);
@@ -2535,7 +3388,7 @@ h6 {
 }
 @keyframes stickyNavAppearence {
   from {
-    top: -10%;
+    top: -30px;
     opacity: 0.1;
   }
 }
@@ -2559,6 +3412,19 @@ h6 {
   }
 }
 @keyframes buttonDisappear {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.6;
+  }
+}
+@keyframes fadeOut {
   to {
     opacity: 0;
   }

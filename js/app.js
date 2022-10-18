@@ -1,12 +1,43 @@
+import { appendMutipleChilds, prependMutipleChilds } from './helper.js';
+
 const listSliderItems = document.querySelectorAll(".slider__item");
 const bgImageUrls = ['/assets/slider/slider_bg.jpg', '/assets/slider/slider_bg02.jpg'];
 
 listSliderItems.forEach((item, index) => item.style.backgroundImage = `${bgImageUrls[index]}`);
 
-function appendMutipleChilds(parent, ...childs) {
-    for (const child of childs) {
-        parent.appendChild(child);
-    }
+function renderMinicartData() {
+    fetch('https://mocki.io/v1/669aedd4-8ea9-4d39-b271-20b882967e9d')
+        .then(res => res.json())
+        .then(datas => {
+            const names = datas.map(data => data.name);
+            const oldPrice = datas.map(data => data.old);
+            const salePrice = datas.map(data => data.sale);
+            const images = datas.map(data => data.image);
+
+            const cartProducts = document.querySelectorAll(".cart__product");
+            const prices = document.querySelectorAll(".product-price");
+            const cartImages = document.querySelectorAll(".product-img");
+            const productNames = document.querySelectorAll(".product-name");
+            const oldPrices = document.querySelectorAll(".product-old-price");
+            const newPrices = document.querySelectorAll(".product-new-price");
+            const totalPrices = document.querySelectorAll(".total-price>span");
+            let total = 0;
+
+            for (let i = 0; i < cartProducts.length; i++) {
+                cartImages[i].setAttribute('src', images[i]);
+
+                productNames[i].innerText = names[i];
+                newPrices[i].innerHTML = `$${salePrice[i]} `;
+                oldPrices[i].innerHTML = `$${oldPrice[i]} `;
+
+                appendMutipleChilds(prices[i], productNames[i], newPrices[i], oldPrices[i])
+                prependMutipleChilds(cartProducts[i], cartImages[i]);
+
+                total += salePrice[i];
+                totalPrices[i].innerText = `$${total}`;
+            }
+        })
+        .catch(err => console.error('error'));
 }
 
 function renderReleashedGameData() {
@@ -165,9 +196,10 @@ function renderProductsCategoryData() {
             }
 
             listProducts.appendChild(list);
-        });
+        })
 }
 
+renderMinicartData();
 renderReleashedGameData();
 renderFeatureGamesData();
 renderGamingProductsData();

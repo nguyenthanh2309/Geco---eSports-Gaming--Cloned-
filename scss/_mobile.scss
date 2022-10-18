@@ -1,0 +1,13 @@
+@use 'variables' as *;
+@include mobileBreakpoints {
+    body {
+        overflow: hidden;
+    }
+    .nav {
+        width: 100%;
+        display: none;
+    }
+    .just-for-gamers__illustrations-container {
+        display: block;
+    }
+}
