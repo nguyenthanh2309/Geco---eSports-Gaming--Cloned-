@@ -236,8 +236,10 @@ function buttonScrollAppear() {
 function mobileSubMenuHandleEvent() {
     const expandBtn = document.querySelector(".btn-expand");
     const navSubmenu = document.querySelector(".nav-submenu");
-    const navDropdownExpandBtn = document.querySelectorAll(".nav-dropdown__expand");
+    const navDropdownExpandBtn = document.querySelectorAll(".nav-submenu__expand");
     const subMenu = document.querySelectorAll(".submenu");
+
+    console.log(navDropdownExpandBtn)
 
     function displayNavSubmenu() {
         // navSubmenu.style.animation = 'subMenuAppearence .3s linear';
