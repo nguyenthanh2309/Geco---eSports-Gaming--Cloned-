@@ -1,13 +1,271 @@
-@use 'variables' as *;
-@include mobileBreakpoints {
+@use 'variables' as var;
+@use 'helper' as help;
+@include var.mobileBreakpoints {
+    html,
     body {
-        overflow: hidden;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #header {
+        position: relative;
+    }
+    .nav__container {
+        background-position: center left;
+    }
+    .btn--scroll-to-top {
+        bottom: 10px;
+        right: 10px;
     }
     .nav {
-        width: 100%;
+        display: block;
+        &__container {
+            border-radius: 0;
+            padding: 28px 15px;
+        }
+        &__item-list {
+            display: none;
+        }
+    }
+    .slider-area .slider__illustrations {
         display: none;
     }
-    .just-for-gamers__illustrations-container {
-        display: block;
+    .slider-area .slider__btn {
+        display: none;
+    }
+    .slider-area {
+        .slider {
+            &__content {
+                margin: 0;
+                & h3 {
+                    font-size: 16px;
+                }
+                & h1 {
+                    font-size: 45px;
+                    white-space: nowrap;
+                    line-height: 1;
+                }
+            }
+            &__item {
+                text-align: center;
+            }
+            &__circle {
+                &>img {
+                    width: 600px;
+                }
+            }
+        }
+    }
+    .releashed-game {
+        &__card-container {
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 20px;
+            .card {
+                &__img {
+                    flex: 1;
+                    padding-top: 20px;
+                    &>img {
+                        width: 100%;
+                    }
+                }
+                &__owl-buttons {
+                    display: none;
+                }
+                &__title {
+                    &::after {
+                        background-size: cover;
+                        height: 60%;
+                        @include help.absCenterY;
+                        width: 192px;
+                    }
+                }
+            }
+        }
+    }
+    .just-for-gamers {
+        &-area {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        &__introducing {
+            align-items: center;
+            padding: 0 20px;
+        }
+        &__description {
+            text-align: center;
+        }
+        &__illustrations-container {
+            display: none;
+        }
+        &__content-container {
+            flex-wrap: wrap;
+            &>li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__content {
+            text-align: center;
+        }
+        &__icon {
+            float: none;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .just-feature-games__game-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &>div:nth-child(5) {
+            align-self: start;
+        }
+        .just-feature-games {
+            &__item {
+                &>img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .cta {
+        &-area {
+            & .padding-container {
+                padding: 300px 0;
+            }
+        }
+        &__content-container {
+            padding: 100px 0;
+        }
+        &__introducing {
+            align-items: center;
+            padding: 0 25px;
+            margin-left: -25px;
+        }
+        &__title {
+            font-size: 36px;
+        }
+        &__description {
+            text-align: center;
+        }
+        &__illustrations {
+            width: 100%;
+            position: absolute;
+            top: 100px
+        }
+        &__btn {
+            @include help.absCenterY;
+            white-space: nowrap;
+        }
+    }
+    .gaming-products {
+        &__carousel {
+            display: block;
+            &>div:not(:first-child) {
+                display: none;
+            }
+            .carousel {
+                &__item>img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .lastest-news-articles__article-container {
+        display: flex;
+        flex-wrap: wrap;
+        .article {
+            &__description {
+                &>img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .footer {
+        .footer {
+            &__newsletter-wrapper {
+                width: 350px;
+                margin-bottom: -210px;
+            }
+            &__title {
+                margin-bottom: 10px;
+                white-space: nowrap;
+            }
+            &__input {
+                margin: 15px 0;
+            }
+            &__main-content {
+                background-size: cover;
+                background-position: center;
+                padding: 15px;
+                padding-top: 200px;
+            }
+            &__contact-info,
+            &__category-list>ul,
+            &__follow-info {
+                margin-bottom: 45px;
+            }
+            &__fire-illustration-left,
+            &__fire-illustration-right {
+                display: none;
+            }
+            &__payment {
+                display: none;
+            }
+        }
+    }
+    .nav-submenu {
+        display: none;
+        background-color: var.$bg-color-menu;
+        top: 80px;
+        padding: 10px 5px;
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+        &__item {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-family: var.$secondary-font;
+            font-weight: 500;
+            color: var.$secondary-color;
+            padding: 10px 15px;
+            position: relative;
+            z-index: 9;
+        }
+        & .submenu {
+            display: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-family: var.$secondary-font;
+            font-weight: 500;
+            color: var.$secondary-color;
+            opacity: .7;
+            transform-origin: top center;
+            position: relative;
+            z-index: -1;
+            &>li {
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                padding: 10px 30px;
+            }
+            &>li:first-child {
+                border-top: 0;
+            }
+        }
+        & .item-submenu {
+            &>span {
+                position: absolute;
+                right: 10px;
+            }
+        }
+    }
+    .btn-expand {
+        background-color: transparent;
+        border: 2px solid #fff;
+        padding: 5px 10px;
+        &>i {
+            color: #fff;
+        }
     }
 }

@@ -127,6 +127,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -298,6 +299,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -466,6 +468,7 @@ h6 {
 .nav {
   position: relative;
   z-index: 99;
+  margin-bottom: -103px;
 }
 .nav__container {
   background-image: url("../assets/backgrounds/header_bg.jpg");
@@ -954,6 +957,38 @@ h6 {
     opacity: 0;
   }
 }
+@-webkit-keyframes subMenuAppearence {
+  from {
+    height: 0;
+  }
+  to {
+    height: 315px;
+  }
+}
+@keyframes subMenuAppearence {
+  from {
+    height: 0;
+  }
+  to {
+    height: 315px;
+  }
+}
+@-webkit-keyframes subMenuDisappearenece {
+  from {
+    height: 315px;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes subMenuDisappearenece {
+  from {
+    height: 315px;
+  }
+  to {
+    height: 0;
+  }
+}
 .slider-area {
   height: 85vh;
   -webkit-user-select: none;
@@ -982,7 +1017,7 @@ h6 {
 .slider-area .slider__content h3 {
   font-family: "Poppins", sans-serif;
   color: #E4A101;
-  font-size: 1.375rem;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -1131,6 +1166,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -1233,6 +1269,7 @@ h6 {
 }
 .releashed-game__introducing {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 75px;
 }
@@ -1277,6 +1314,7 @@ h6 {
   display: flex;
   align-items: center;
   box-shadow: 0px 1px 13px 0px rgba(128, 18, 40, 0.1);
+  background-color: #fff;
   gap: 4%;
 }
 .releashed-game__card-container .card__img {
@@ -1381,7 +1419,7 @@ h6 {
 .releashed-game__card-container .card__btn {
   font-size: 14px;
   margin: 0;
-  padding: 13px 35px;
+  padding: 13px 25px;
 }
 .releashed-game__list-games {
   flex: 1;
@@ -1482,6 +1520,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -1615,6 +1654,7 @@ h6 {
 }
 .just-for-gamers__introducing {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 0;
 }
@@ -1795,6 +1835,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -1899,6 +1940,7 @@ h6 {
 }
 .just-feature-games__introducing {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 75px;
 }
@@ -2062,6 +2104,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -2168,6 +2211,7 @@ h6 {
 }
 .cta__introducing {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 5%;
 }
@@ -2287,6 +2331,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -2389,6 +2434,7 @@ h6 {
 }
 .gaming-products__introducing {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 75px;
 }
@@ -2565,6 +2611,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -2664,6 +2711,7 @@ h6 {
 
 .lastest-news-articles__introducing {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   margin-bottom: 75px;
 }
@@ -2841,6 +2889,7 @@ h6 {
   background-image: url("../assets/backgrounds/header_bg.jpg");
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 .hover {
@@ -3427,5 +3476,21 @@ h6 {
 @keyframes fadeOut {
   to {
     opacity: 0;
+  }
+}
+@keyframes subMenuAppearence {
+  from {
+    height: 0;
+  }
+  to {
+    height: 315px;
+  }
+}
+@keyframes subMenuDisappearenece {
+  from {
+    height: 315px;
+  }
+  to {
+    height: 0;
   }
 }/*# sourceMappingURL=style.css.map */

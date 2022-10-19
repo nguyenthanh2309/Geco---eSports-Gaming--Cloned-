@@ -161,3 +161,21 @@
         opacity: 0;
     }
 }
+
+@keyframes subMenuAppearence {
+    from {
+        height: 0;
+    }
+    to {
+        height: 315px;
+    }
+}
+
+@keyframes subMenuDisappearenece {
+    from {
+        height: 315px;
+    }
+    to {
+        height: 0;
+    }
+}

@@ -73,6 +73,7 @@
 .nav {
     position: relative;
     z-index: 99;
+    margin-bottom: -103px;
     &__container {
         background-image: url('../assets/backgrounds/header_bg.jpg');
         background-position: center right;
