@@ -6,12 +6,8 @@ function preload() {
     const loading = (elem) => elem.style.display = 'block';
     const loaded = (elem) => elem.style.display = 'none';
 
-    document.addEventListener('readystatechange', () => {
-        if (document.readyState != 'complete') {
-            loading(preloader);
-        } else {
-            loaded(preloader);
-        }
+    document.addEventListener('load', () => {
+        loading(preloader);
     })
 }
 
